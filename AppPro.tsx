@@ -1,30 +1,22 @@
+//write basic react functional component without comments
 import React from 'react';
-import {StyleSheet, Text, useColorScheme, View} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet, Text} from 'react-native';
+import FlatCards from './components/FlatCards.tsx';
+import ElevatedCards from './components/ElevatedCards.tsx';
+import FancyCards from './components/FancyCards.tsx';
 
-function AppPro(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'light';
+const AppPro = () => {
   return (
-    <View style={styles.container}>
-      <Text style={isDarkMode ? styles.whiteText : styles.blackText}>
-        {' '}
-        Hello World!!{' '}
-      </Text>
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <FlatCards />
+        <ElevatedCards />
+        <FancyCards />
+      </ScrollView>
+    </SafeAreaView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  whiteText: {
-    color: '#fff',
-  },
-  blackText: {
-    color: '#000',
-  },
-});
+//create stylesheet
 
 export default AppPro;
