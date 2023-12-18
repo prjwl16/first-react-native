@@ -1,3 +1,8 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+//    @typescript-eslint/no-unused-vars disable this
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+  }
 }
